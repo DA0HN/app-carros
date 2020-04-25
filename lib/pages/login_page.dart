@@ -1,3 +1,4 @@
+import 'package:example/api/login_api.dart';
 import 'package:example/pages/home_page.dart';
 import 'package:example/utils/nav.dart';
 import 'package:example/widget/app_button.dart';
@@ -102,7 +103,10 @@ class _LoginPageState extends State<LoginPage> {
     String login = _loginCtrl.text;
     String password = _passwordCtrl.text;
 
-    print("Login: $login | password: $password");
-    push(context, HomePage());
+    bool ok = await LoginAPI.login(login, password);
+
+    if( ok ) {
+      push(context, HomePage());
+    }
   }
 }
