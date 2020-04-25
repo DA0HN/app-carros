@@ -1,9 +1,26 @@
+import 'package:example/widget/app_button.dart';
+import 'package:example/widget/app_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
-  final _loginCtrl = TextEditingController();
-  final _passwordCtrl = TextEditingController();
+class LoginPage extends StatefulWidget {
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  final _formKey = GlobalKey<FormState>();
+
+  final _loginCtrl = TextEditingController(text: "Gabriel");
+
+  final _passwordCtrl = TextEditingController(text: "123435312");
+
+  final _focusPassword = FocusNode();
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,69 +36,70 @@ class LoginPage extends StatelessWidget {
   }
 
   _body() {
-    return Container(
-      padding: EdgeInsets.all(16),
-      child: ListView(
-        children: <Widget>[
-          _textField("login", "Digite seu login", controller: _loginCtrl),
-          SizedBox(
-            height: 10,
-          ),
-          _textField("Senha", "Digite sua senha",
-              controller: _passwordCtrl, password: true),
-          SizedBox(
-            height: 20,
-          ),
-          _button("Login", _onClickLogin),
-        ],
+    return Form(
+      key: _formKey,
+      child: Container(
+        padding: EdgeInsets.all(16),
+        child: ListView(
+          children: <Widget>[
+            AppText(
+              "login",
+              "Digite seu login",
+              controller: _loginCtrl,
+              validator: _validateLogin,
+              keyboardType: TextInputType.emailAddress,
+              nextFocus: _focusPassword,
+              textInputAction: TextInputAction.next,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            AppText(
+              "Senha",
+              "Digite sua senha",
+              controller: _passwordCtrl,
+              password: true,
+              validator: _validatePassword,
+              keyboardType: TextInputType.number,
+              focusNode: _focusPassword,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            AppButton("Login", _onClickLogin),
+          ],
+        ),
       ),
     );
   }
 
+  String _validateLogin(String text) {
+    if (text.isEmpty) {
+      return "Digite o login";
+    }
+    return null;
+  }
+
+  String _validatePassword(String text) {
+    if (text.isEmpty) {
+      return "Digite a senha";
+    }
+    if (text.length < 4) {
+      return "A senha precisa ter mais de 4 caracteres";
+    }
+    return null;
+  }
+
   _onClickLogin() {
+    bool formOk = _formKey.currentState.validate();
+
+    if (!formOk) {
+      return;
+    }
+
     String login = _loginCtrl.text;
     String password = _passwordCtrl.text;
 
     print("Login: $login | password: $password");
-  }
-
-  _button(String text, Function onPressed) {
-    return Container(
-      height: 46,
-      child: RaisedButton(
-        color: Colors.blue,
-        child: Text(
-          text,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 22,
-          ),
-        ),
-        onPressed: onPressed,
-      ),
-    );
-  }
-
-  TextFormField _textField(String label, String hint,
-      {TextEditingController controller, bool password = false}) {
-    return TextFormField(
-      controller: controller,
-      obscureText: password,
-      style: TextStyle(
-        fontSize: 25,
-        color: Colors.blue,
-      ),
-      decoration: InputDecoration(
-        labelText: label,
-        labelStyle: TextStyle(
-          fontSize: 25,
-          color: Colors.grey,
-        ),
-        hintText: hint,
-        hintStyle: TextStyle(
-          fontSize: 16,
-        ),
-      ),
-    );
   }
 }
