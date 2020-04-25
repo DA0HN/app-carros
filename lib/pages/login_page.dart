@@ -2,6 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
+  final _loginCtrl = TextEditingController();
+  final _passwordCtrl = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,62 +23,64 @@ class LoginPage extends StatelessWidget {
       padding: EdgeInsets.all(16),
       child: ListView(
         children: <Widget>[
-          TextFormField(
-            style: TextStyle(
-              fontSize: 25,
-              color: Colors.blue,
-            ),
-            decoration: InputDecoration(
-              labelText: "Login",
-              labelStyle: TextStyle(
-                fontSize: 25,
-                color: Colors.grey,
-              ),
-              hintText: "Digite o login",
-              hintStyle: TextStyle(
-                fontSize: 16,
-              ),
-            ),
-          ),
+          _textField("login", "Digite seu login", controller: _loginCtrl),
           SizedBox(
             height: 10,
           ),
-          TextFormField(
-            style: TextStyle(
-              fontSize: 25,
-              color: Colors.blue,
-            ),
-            decoration: InputDecoration(
-              labelText: "Senha",
-              labelStyle: TextStyle(
-                fontSize: 25,
-                color: Colors.grey,
-              ),
-              hintText: "Digite sua senha",
-              hintStyle: TextStyle(
-                fontSize: 16,
-              ),
-            ),
-            obscureText: true,
-          ),
+          _textField("Senha", "Digite sua senha",
+              controller: _passwordCtrl, password: true),
           SizedBox(
             height: 20,
           ),
-          Container(
-            height: 46,
-            child: RaisedButton(
-              color: Colors.blue,
-              child: Text(
-                "Login",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 22,
-                ),
-              ),
-              onPressed: () {},
-            ),
-          ),
+          _button("Login", _onClickLogin),
         ],
+      ),
+    );
+  }
+
+  _onClickLogin() {
+    String login = _loginCtrl.text;
+    String password = _passwordCtrl.text;
+
+    print("Login: $login | password: $password");
+  }
+
+  _button(String text, Function onPressed) {
+    return Container(
+      height: 46,
+      child: RaisedButton(
+        color: Colors.blue,
+        child: Text(
+          text,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 22,
+          ),
+        ),
+        onPressed: onPressed,
+      ),
+    );
+  }
+
+  TextFormField _textField(String label, String hint,
+      {TextEditingController controller, bool password = false}) {
+    return TextFormField(
+      controller: controller,
+      obscureText: password,
+      style: TextStyle(
+        fontSize: 25,
+        color: Colors.blue,
+      ),
+      decoration: InputDecoration(
+        labelText: label,
+        labelStyle: TextStyle(
+          fontSize: 25,
+          color: Colors.grey,
+        ),
+        hintText: hint,
+        hintStyle: TextStyle(
+          fontSize: 16,
+        ),
       ),
     );
   }
