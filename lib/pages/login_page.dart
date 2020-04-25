@@ -1,3 +1,5 @@
+import 'package:example/pages/home_page.dart';
+import 'package:example/utils/nav.dart';
 import 'package:example/widget/app_button.dart';
 import 'package:example/widget/app_text.dart';
 import 'package:flutter/cupertino.dart';
@@ -90,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
     return null;
   }
 
-  _onClickLogin() {
+  void _onClickLogin() async {
     bool formOk = _formKey.currentState.validate();
 
     if (!formOk) {
@@ -101,5 +103,6 @@ class _LoginPageState extends State<LoginPage> {
     String password = _passwordCtrl.text;
 
     print("Login: $login | password: $password");
+    push(context, HomePage());
   }
 }
