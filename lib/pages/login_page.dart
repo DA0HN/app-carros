@@ -15,9 +15,68 @@ class LoginPage extends StatelessWidget {
     );
   }
 
-  Container _body() {
+  _body() {
     return Container(
-      color: Colors.white,
+      padding: EdgeInsets.all(16),
+      child: ListView(
+        children: <Widget>[
+          TextFormField(
+            style: TextStyle(
+              fontSize: 25,
+              color: Colors.blue,
+            ),
+            decoration: InputDecoration(
+              labelText: "Login",
+              labelStyle: TextStyle(
+                fontSize: 25,
+                color: Colors.grey,
+              ),
+              hintText: "Digite o login",
+              hintStyle: TextStyle(
+                fontSize: 16,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          TextFormField(
+            style: TextStyle(
+              fontSize: 25,
+              color: Colors.blue,
+            ),
+            decoration: InputDecoration(
+              labelText: "Senha",
+              labelStyle: TextStyle(
+                fontSize: 25,
+                color: Colors.grey,
+              ),
+              hintText: "Digite sua senha",
+              hintStyle: TextStyle(
+                fontSize: 16,
+              ),
+            ),
+            obscureText: true,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Container(
+            height: 46,
+            child: RaisedButton(
+              color: Colors.blue,
+              child: Text(
+                "Login",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 22,
+                ),
+              ),
+              onPressed: () {},
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
