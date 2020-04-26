@@ -1,4 +1,5 @@
 import 'package:example/api/login_api.dart';
+import 'package:example/api/model/usuario.dart';
 import 'package:example/pages/home_page.dart';
 import 'package:example/utils/nav.dart';
 import 'package:example/widget/app_button.dart';
@@ -14,9 +15,9 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final _formKey = GlobalKey<FormState>();
 
-  final _loginCtrl = TextEditingController(text: "Gabriel");
+  final _loginCtrl = TextEditingController(text: "admin");
 
-  final _passwordCtrl = TextEditingController(text: "123435312");
+  final _passwordCtrl = TextEditingController(text: "123");
 
   final _focusPassword = FocusNode();
 
@@ -87,7 +88,7 @@ class _LoginPageState extends State<LoginPage> {
     if (text.isEmpty) {
       return "Digite a senha";
     }
-    if (text.length < 4) {
+    if (text.length < 3) {
       return "A senha precisa ter mais de 4 caracteres";
     }
     return null;
@@ -103,10 +104,15 @@ class _LoginPageState extends State<LoginPage> {
     String login = _loginCtrl.text;
     String password = _passwordCtrl.text;
 
-    bool ok = await LoginAPI.login(login, password);
+    Usuario user = await LoginAPI.login(login, password);
 
-    if( ok ) {
+    if( user != null ) {
+      print(">>> $user");
       push(context, HomePage());
+    }
+    else {
+      // TODO: substituir por mensagem no app
+      print("Login incorreto");
     }
   }
 }
