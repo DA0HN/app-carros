@@ -21,6 +21,8 @@ class _LoginPageState extends State<LoginPage> {
 
   final _focusPassword = FocusNode();
 
+  bool _showProgress = false;
+
   @override
   void initState() {
     super.initState();
@@ -70,7 +72,11 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(
               height: 20,
             ),
-            AppButton("Login", _onClickLogin),
+            AppButton(
+              "Login",
+              onPressed: _onClickLogin,
+              showProgress: _showProgress,
+            ),
           ],
         ),
       ),
@@ -101,15 +107,24 @@ class _LoginPageState extends State<LoginPage> {
       return;
     }
 
+    // redesenha a tela com a animação de loading
+    setState(() {
+      _showProgress = true;
+    });
+
     String login = _loginCtrl.text;
     String password = _passwordCtrl.text;
-
     var response = await LoginAPI.login(login, password);
 
-    if (response["result"] != null ) {
+
+    if (response["result"] != null) {
       push(context, HomePage());
     } else {
       alert(context, response["status"]);
     }
+    // redesenha a tela para retirar a animação de loading
+    setState(() {
+      _showProgress = false;
+    });
   }
 }
