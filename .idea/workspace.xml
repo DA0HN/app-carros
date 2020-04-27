@@ -7,9 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="894fda33-c0e6-4dea-a7be-bfae8d38477f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/pages/carro/carro.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/widget/app_drawer_list.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/login_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/login_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widget/app_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widget/app_button.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/api/api_login.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/login/api_login.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/api/api_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/api_response.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/api/model/usuario.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/login/usuario.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/carro/home_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/login_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/login/login_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils/nav.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/nav.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +37,16 @@
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\android\carros\lib\pages" />
+      <recent name="E:\android\carros\lib\pages\carro" />
+      <recent name="E:\android\carros\lib\pages\login" />
+      <recent name="E:\android\carros\lib\model" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
