@@ -1,17 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidConfiguredLogFilters">
+    <filters>
+      <filter>
+        <option name="logLevel" value="verbose" />
+        <option name="logMessagePattern" value="^(?!(com.google.android.gms.persistent|android.os.Debug|packageToExclude))" />
+        <option name="logTagPattern" value="^(?!(eglCodecCommon|GnssLocationProvider|system_process|audio_hw_generic|tagToExclude))" />
+        <option name="name" value="br.com.example" />
+        <option name="packageNamePattern" value="br.com.example." />
+        <option name="pid" value="" />
+      </filter>
+    </filters>
+  </component>
   <component name="AndroidLayouts">
     <shared>
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="br.com.example" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="894fda33-c0e6-4dea-a7be-bfae8d38477f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/pages/carro/tipo_carro.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils/prefs.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/main_dart.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/main_dart.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/carro/api_carros.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/carro/api_carros.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/carro/carros_listview.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/carro/carros_listview.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/carro/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/carro/home_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,10 +55,15 @@
   <component name="ProjectId" id="1b2qw3pByouNbwY1rjU8EZT0aBv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="project.structure.last.edited" value="SDK Location" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="flutter.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
