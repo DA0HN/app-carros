@@ -4,7 +4,7 @@ import 'package:example/pages/api_response.dart';
 import 'package:example/pages/login/usuario.dart';
 import 'package:http/http.dart' as http;
 
-class LoginAPI {
+class ApiLogin {
   static Future<Map<String, dynamic>> login(
       String username, String password) async {
 //    final url = "http://livrowebservices.com.br/rest/login";
