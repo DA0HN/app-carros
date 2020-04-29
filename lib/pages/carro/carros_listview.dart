@@ -1,15 +1,26 @@
 import 'package:example/pages/carro/api_carros.dart';
 import 'package:example/pages/carro/carro.dart';
+import 'package:example/pages/carro/tipo_carro.dart';
 import 'package:flutter/material.dart';
 
-class CarrosListView extends StatelessWidget {
+class CarrosListView extends StatefulWidget {
+  TipoCarro tipo;
+
+  CarrosListView(this.tipo);
+
+  @override
+  _CarrosListViewState createState() => _CarrosListViewState();
+}
+
+class _CarrosListViewState extends State<CarrosListView> with AutomaticKeepAliveClientMixin{
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return _body();
   }
 
   _body() {
-    Future<List<Carro>> futureData = ApiCarros.getCarros();
+    Future<List<Carro>> futureData = ApiCarros.getCarros(widget.tipo);
     return FutureBuilder(
       future: futureData,
       builder: (BuildContext context, AsyncSnapshot snapshot) {
@@ -91,4 +102,7 @@ class CarrosListView extends StatelessWidget {
       ),
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }
