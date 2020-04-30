@@ -136,4 +136,11 @@ class _LoginPageState extends State<LoginPage> {
     // redesenha a tela para retirar a animação de loading
     _streamController.add(false);
   }
+
+  @override
+  void dispose() {
+    // libera a memória e fecha a Stream
+    super.dispose();
+    _streamController.close();
+  }
 }
