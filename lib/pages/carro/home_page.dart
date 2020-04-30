@@ -15,11 +15,15 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this);
-    Future<int> futureValue = Prefs.getInt("tab_index");
+    _initTabs();
+  }
 
-    futureValue.then((int tabIndex) {
-      _tabController.index = tabIndex;
+  _initTabs() async {
+    int indexTab = await Prefs.getInt("tab_index");
+    _tabController = TabController(length: 3, vsync: this);
+
+    setState(() {
+      _tabController.index = indexTab;
     });
 
     _tabController.addListener(() {
@@ -33,23 +37,29 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       appBar: AppBar(
         centerTitle: true,
         title: Text("Carros"),
-        bottom: TabBar(
-          controller: _tabController,
-          tabs: [
-            Tab(text: "Clássicos"),
-            Tab(text: "Esportivos"),
-            Tab(text: "Luxo"),
-          ],
-        ),
+        bottom: _tabController == null
+            ? null
+            : TabBar(
+                controller: _tabController,
+                tabs: [
+                  Tab(text: "Clássicos"),
+                  Tab(text: "Esportivos"),
+                  Tab(text: "Luxo"),
+                ],
+              ),
       ),
-      body: TabBarView(
-        controller: _tabController,
-        children: [
-          CarrosListView(TipoCarro.classicos()),
-          CarrosListView(TipoCarro.esportivos()),
-          CarrosListView(TipoCarro.luxo()),
-        ],
-      ),
+      body: _tabController == null
+          ? Center(
+              child: CircularProgressIndicator(),
+            )
+          : TabBarView(
+              controller: _tabController,
+              children: [
+                CarrosListView(TipoCarro.classicos()),
+                CarrosListView(TipoCarro.esportivos()),
+                CarrosListView(TipoCarro.luxo()),
+              ],
+            ),
       drawer: DrawerList(),
     );
   }
