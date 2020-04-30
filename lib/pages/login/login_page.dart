@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:example/pages/carro/home_page.dart';
 import 'package:example/pages/login/api_login.dart';
 import 'package:example/pages/login/usuario.dart';
@@ -21,12 +23,11 @@ class _LoginPageState extends State<LoginPage> {
 
   final _focusPassword = FocusNode();
 
-  bool _showProgress = false;
+  final _streamController = StreamController<bool>();
 
   @override
   void initState() {
     super.initState();
-
     Future<Usuario> future = Usuario.get();
     future.then((Usuario user) {
       if (user != null) {
@@ -80,11 +81,16 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(
               height: 20,
             ),
-            AppButton(
-              "Login",
-              onPressed: _onClickLogin,
-              showProgress: _showProgress,
-            ),
+            StreamBuilder<bool>(
+                initialData: false,
+                stream: _streamController.stream,
+                builder: (context, snapshot) {
+                  return AppButton(
+                    "Login",
+                    onPressed: _onClickLogin,
+                    showProgress: snapshot.data,
+                  );
+                }),
           ],
         ),
       ),
@@ -116,9 +122,7 @@ class _LoginPageState extends State<LoginPage> {
     }
 
     // redesenha a tela com a animação de loading
-    setState(() {
-      _showProgress = true;
-    });
+    _streamController.add(true);
 
     String login = _loginCtrl.text;
     String password = _passwordCtrl.text;
@@ -130,8 +134,6 @@ class _LoginPageState extends State<LoginPage> {
       alert(context, response["status"]);
     }
     // redesenha a tela para retirar a animação de loading
-    setState(() {
-      _showProgress = false;
-    });
+    _streamController.add(false);
   }
 }
