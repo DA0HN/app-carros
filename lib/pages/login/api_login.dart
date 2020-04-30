@@ -33,20 +33,21 @@ class ApiLogin {
         "password": password,
       });
 
-//      print(">> $jsonParams");
+      print(">> $jsonParams");
 
       var response = await http.post(
         url,
         body: jsonParams,
         headers: headers,
       );
-//      print("Response status: ${response.statusCode}");
-//      print("Response body: ${response.body}");
+      print("Response status: ${response.statusCode}");
+      print("Response body: ${response.body}");
 
       var parsedResponse = json.decode(response.body);
 
       if (response.statusCode == 200) {
         final user = Usuario.fromJson(parsedResponse);
+        print(">> $user");
         user.save();
         return ApiResponse.ok(user);
       }

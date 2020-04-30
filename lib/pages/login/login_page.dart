@@ -1,5 +1,6 @@
 import 'package:example/pages/carro/home_page.dart';
 import 'package:example/pages/login/api_login.dart';
+import 'package:example/pages/login/usuario.dart';
 import 'package:example/utils/alert.dart';
 import 'package:example/utils/nav.dart';
 import 'package:example/widget/app_button.dart';
@@ -14,9 +15,9 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final _formKey = GlobalKey<FormState>();
 
-  final _loginCtrl = TextEditingController(text: "admin");
+  final _loginCtrl = TextEditingController();
 
-  final _passwordCtrl = TextEditingController(text: "123");
+  final _passwordCtrl = TextEditingController();
 
   final _focusPassword = FocusNode();
 
@@ -25,6 +26,14 @@ class _LoginPageState extends State<LoginPage> {
   @override
   void initState() {
     super.initState();
+
+    Future<Usuario> future = Usuario.get();
+    future.then((Usuario user) {
+      if (user != null) {
+        // Se o usuário não fizer logout o app mantém o último login ativo
+        push(context, HomePage(), replace: true);
+      }
+    });
   }
 
   @override
