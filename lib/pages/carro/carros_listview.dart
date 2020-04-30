@@ -1,6 +1,8 @@
 import 'package:example/pages/carro/api_carros.dart';
 import 'package:example/pages/carro/carro.dart';
+import 'package:example/pages/carro/carro_page.dart';
 import 'package:example/pages/carro/tipo_carro.dart';
+import 'package:example/utils/nav.dart';
 import 'package:flutter/material.dart';
 
 class CarrosListView extends StatefulWidget {
@@ -12,9 +14,10 @@ class CarrosListView extends StatefulWidget {
   _CarrosListViewState createState() => _CarrosListViewState();
 }
 
-class _CarrosListViewState extends State<CarrosListView> with AutomaticKeepAliveClientMixin{
+class _CarrosListViewState extends State<CarrosListView> with AutomaticKeepAliveClientMixin {
   @override
   Widget build(BuildContext context) {
+    print("CarrosListView Build");
     super.build(context);
     return _body();
   }
@@ -85,7 +88,7 @@ class _CarrosListViewState extends State<CarrosListView> with AutomaticKeepAlive
                       children: <Widget>[
                         FlatButton(
                           child: const Text("DETALHES"),
-                          onPressed: () {},
+                          onPressed: () => _onClickDetalhes(c),
                         ),
                         FlatButton(
                           child: const Text("SHARE"),
@@ -105,4 +108,8 @@ class _CarrosListViewState extends State<CarrosListView> with AutomaticKeepAlive
 
   @override
   bool get wantKeepAlive => true;
+
+  _onClickDetalhes(Carro carro) {
+    push(context, CarroPage(carro));
+  }
 }
