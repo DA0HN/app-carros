@@ -37,30 +37,29 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       appBar: AppBar(
         centerTitle: true,
         title: Text("Carros"),
-        bottom: _tabController == null
-            ? null
-            : TabBar(
-                controller: _tabController,
-                tabs: [
-                  Tab(text: "Clássicos"),
-                  Tab(text: "Esportivos"),
-                  Tab(text: "Luxo"),
-                ],
-              ),
+        bottom: _bottom(),
       ),
-      body: _tabController == null
-          ? Center(
-              child: CircularProgressIndicator(),
-            )
-          : TabBarView(
-              controller: _tabController,
-              children: [
-                CarrosListView(TipoCarro.classicos()),
-                CarrosListView(TipoCarro.esportivos()),
-                CarrosListView(TipoCarro.luxo()),
-              ],
-            ),
+      body: _body(),
       drawer: DrawerList(),
     );
+  }
+
+  TabBar _bottom() {
+    return _tabController == null
+        ? null
+        : TabBar(
+            controller: _tabController,
+            tabs: [Tab(text: "Clássicos"), Tab(text: "Esportivos"), Tab(text: "Luxo")],
+          );
+  }
+
+  Widget _body() {
+    return _tabController == null
+        ? Center(child: CircularProgressIndicator())
+        : TabBarView(controller: _tabController, children: [
+            CarrosListView(TipoCarro.classicos()),
+            CarrosListView(TipoCarro.esportivos()),
+            CarrosListView(TipoCarro.luxo()),
+          ]);
   }
 }
