@@ -14,7 +14,7 @@ class ApiCarros {
       "Authorization": "Bearer $token"
     };
 
-    var url = "https://carros-springboot.herokuapp.com/api/v2/carros/tipo/${tipo.tipo}";
+    var url = "http://carros-springboot.herokuapp.com/api/v2/carros/tipo/${tipo.tipo}";
     print(">> GET $url");
     var response = await http.get(url, headers: headers);
 

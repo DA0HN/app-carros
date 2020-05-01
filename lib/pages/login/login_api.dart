@@ -5,19 +5,8 @@ import 'package:example/pages/login/usuario.dart';
 import 'package:http/http.dart' as http;
 
 class ApiLogin {
-  static Future<Map<String, dynamic>> login(String username, String password) async {
-//    final url = "http://livrowebservices.com.br/rest/login";
-    var response = await _post(username, password);
-    if (response.ok) {
-      return {
-        "result": response.result,
-        "status": response.msg,
-      };
-    }
-    return {
-      "result": null,
-      "status": response.msg,
-    };
+  static Future<ApiResponse<Usuario>> login(String username, String password) async {
+    return await _post(username, password);
   }
 
   static Future<ApiResponse<Usuario>> _post(String username, String password) async {
@@ -33,7 +22,7 @@ class ApiLogin {
         "password": password,
       });
 
-      print(">> $jsonParams");
+//      print(">> $jsonParams");
 
       var response = await http.post(
         url,

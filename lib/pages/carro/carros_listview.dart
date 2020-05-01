@@ -1,10 +1,9 @@
-import 'dart:async';
-
-import 'package:example/pages/carro/api_carros.dart';
 import 'package:example/pages/carro/carro.dart';
 import 'package:example/pages/carro/carro_page.dart';
+import 'package:example/pages/carro/carros_bloc.dart';
 import 'package:example/pages/carro/tipo_carro.dart';
 import 'package:example/utils/nav.dart';
+import 'package:example/widget/app_text_error.dart';
 import 'package:flutter/material.dart';
 
 class CarrosListView extends StatefulWidget {
@@ -17,20 +16,17 @@ class CarrosListView extends StatefulWidget {
 }
 
 class _CarrosListViewState extends State<CarrosListView> with AutomaticKeepAliveClientMixin {
-  final _streamController = StreamController<List<Carro>>();
-
   @override
   bool get wantKeepAlive => true;
+
+  TipoCarro get tipo => widget.tipo;
+
+  final _bloc = CarrosBloc();
 
   @override
   void initState() {
     super.initState();
-    _loadCarros();
-  }
-
-  void _loadCarros() async {
-    List<Carro> carros = await ApiCarros.getCarros(widget.tipo);
-    _streamController.add(carros);
+    _bloc.fetch(tipo);
   }
 
   @override
@@ -41,21 +37,12 @@ class _CarrosListViewState extends State<CarrosListView> with AutomaticKeepAlive
 
   _body() {
     return StreamBuilder(
-      stream: _streamController.stream,
+      stream: _bloc.stream,
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.hasError) {
           print(snapshot.error);
-          return Center(
-            child: Text(
-              "Não foi possível buscar os carros",
-              style: TextStyle(
-                fontSize: 22,
-                color: Colors.red,
-              ),
-            ),
-          );
+          return TextError("Não foi possível buscar os carros");
         }
-
         if (!snapshot.hasData) {
           return Center(
             child: CircularProgressIndicator(),
@@ -129,6 +116,6 @@ class _CarrosListViewState extends State<CarrosListView> with AutomaticKeepAlive
   @override
   void dispose() {
     super.dispose();
-    _streamController.close();
+    _bloc.dispose();
   }
 }

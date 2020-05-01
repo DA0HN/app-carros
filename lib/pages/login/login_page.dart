@@ -1,9 +1,8 @@
 import 'dart:async';
 
 import 'package:example/pages/carro/home_page.dart';
-import 'package:example/pages/login/api_login.dart';
+import 'package:example/pages/login/login_bloc.dart';
 import 'package:example/pages/login/usuario.dart';
-import 'package:example/utils/alert.dart';
 import 'package:example/utils/nav.dart';
 import 'package:example/widget/app_button.dart';
 import 'package:example/widget/app_text.dart';
@@ -23,7 +22,7 @@ class _LoginPageState extends State<LoginPage> {
 
   final _focusPassword = FocusNode();
 
-  final _streamController = StreamController<bool>();
+  final _bloc = LoginBloc();
 
   @override
   void initState() {
@@ -83,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             StreamBuilder<bool>(
                 initialData: false,
-                stream: _streamController.stream,
+                stream: _bloc.stream,
                 builder: (context, snapshot) {
                   return AppButton(
                     "Login",
@@ -121,26 +120,17 @@ class _LoginPageState extends State<LoginPage> {
       return;
     }
 
-    // redesenha a tela com a animação de loading
-    _streamController.add(true);
-
     String login = _loginCtrl.text;
     String password = _passwordCtrl.text;
-    var response = await ApiLogin.login(login, password);
 
-    if (response["result"] != null) {
-      push(context, HomePage(), replace: true);
-    } else {
-      alert(context, response["status"]);
-    }
-    // redesenha a tela para retirar a animação de loading
-    _streamController.add(false);
+    Function action = await _bloc.login(context, login, password);
+    action();
   }
 
   @override
   void dispose() {
     // libera a memória e fecha a Stream
     super.dispose();
-    _streamController.close();
+    _bloc.dispose();
   }
 }
