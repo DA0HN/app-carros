@@ -1,5 +1,5 @@
 import 'package:example/pages/carro/carro.dart';
-import 'package:example/pages/carro/carro_page.dart';
+import 'package:example/pages/detalhes/detalhes_carro_page.dart';
 import 'package:example/pages/carro/carros_bloc.dart';
 import 'package:example/pages/carro/tipo_carro.dart';
 import 'package:example/utils/nav.dart';

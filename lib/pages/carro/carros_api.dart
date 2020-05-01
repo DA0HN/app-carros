@@ -5,7 +5,7 @@ import 'package:example/pages/carro/tipo_carro.dart';
 import 'package:example/pages/login/usuario.dart';
 import 'package:http/http.dart' as http;
 
-class ApiCarros {
+class CarrosApi {
   static Future<List<Carro>> getCarros(TipoCarro tipo) async {
     final String token = await getToken();
 

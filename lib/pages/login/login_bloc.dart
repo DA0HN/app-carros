@@ -13,7 +13,7 @@ class LoginBloc extends Bloc<bool> {
   Future<Function> login(BuildContext context, String username, String password) async {
     // redesenha a tela com a animação de loading
     add(true);
-    var response = await ApiLogin.login(username, password);
+    var response = await LoginApi.login(username, password);
     return _responseAction(response, context);
   }
 

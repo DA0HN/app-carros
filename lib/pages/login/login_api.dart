@@ -4,7 +4,7 @@ import 'package:example/pages/api_response.dart';
 import 'package:example/pages/login/usuario.dart';
 import 'package:http/http.dart' as http;
 
-class ApiLogin {
+class LoginApi {
   static Future<ApiResponse<Usuario>> login(String username, String password) async {
     return await _post(username, password);
   }

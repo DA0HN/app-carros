@@ -5,7 +5,7 @@ import 'package:example/pages/login/login_bloc.dart';
 import 'package:example/pages/login/usuario.dart';
 import 'package:example/utils/nav.dart';
 import 'package:example/widget/app_button.dart';
-import 'package:example/widget/app_text.dart';
+import 'package:example/widget/app_text_field.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
