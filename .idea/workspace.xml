@@ -23,15 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="894fda33-c0e6-4dea-a7be-bfae8d38477f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/pages/carro/carros_bloc.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/pages/login/login_bloc.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/utils/bloc.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/widget/app_text_error.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/carro/api_carros.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/carro/carros_api.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/carro/carros_listview.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/carro/carros_listview.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/login/api_login.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/login/login_api.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/login/login_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/login/login_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +37,11 @@
     <favorites_list name="carros" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IgnoredFileRootStore">
@@ -105,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588278739316</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Refatoração do projeto utilizando Bloc">
+      <created>1588292065971</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588292065971</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,6 +128,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="dispose e fechamento da stream" />
-    <option name="LAST_COMMIT_MESSAGE" value="dispose e fechamento da stream" />
+    <MESSAGE value="Refatoração do projeto utilizando Bloc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refatoração do projeto utilizando Bloc" />
   </component>
 </project>
