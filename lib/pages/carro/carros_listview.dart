@@ -1,10 +1,12 @@
 import 'package:example/pages/carro/carro.dart';
 import 'package:example/pages/carro/carro_page.dart';
-import 'package:example/pages/carro/carros_bloc.dart';
 import 'package:example/pages/carro/tipo_carro.dart';
 import 'package:example/utils/nav.dart';
 import 'package:example/widget/app_text_error.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
+
+import 'carros_model.dart';
 
 class CarrosListView extends StatefulWidget {
   TipoCarro tipo;
@@ -21,12 +23,12 @@ class _CarrosListViewState extends State<CarrosListView> with AutomaticKeepAlive
 
   TipoCarro get tipo => widget.tipo;
 
-  final _bloc = CarrosBloc();
+  final _model = CarrosModel();
 
   @override
   void initState() {
     super.initState();
-    _bloc.fetch(tipo);
+    _fetch();
   }
 
   @override
@@ -35,20 +37,25 @@ class _CarrosListViewState extends State<CarrosListView> with AutomaticKeepAlive
     return _body();
   }
 
+  _fetch() {
+    _model.fetch(tipo);
+  }
+
   _body() {
-    return StreamBuilder(
-      stream: _bloc.stream,
-      builder: (BuildContext context, AsyncSnapshot snapshot) {
-        if (snapshot.hasError) {
-          print(snapshot.error);
-          return TextError("Não foi possível buscar os carros");
+    return Observer(
+      builder: (_) {
+        List<Carro> carros = _model.carros;
+        if (_model.error != null) {
+          return TextError(
+            "Não foi possível buscar os carros\nClique para tentar novamente!",
+            onPressed: _fetch,
+          );
         }
-        if (!snapshot.hasData) {
+        if (carros == null) {
           return Center(
             child: CircularProgressIndicator(),
           );
         }
-        List<Carro> carros = snapshot.data;
         return _listView(carros);
       },
     );
@@ -111,11 +118,5 @@ class _CarrosListViewState extends State<CarrosListView> with AutomaticKeepAlive
 
   _onClickDetalhes(Carro carro) {
     push(context, CarroPage(carro));
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    _bloc.dispose();
   }
 }

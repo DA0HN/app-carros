@@ -11,7 +11,7 @@ class ApiLogin {
 
   static Future<ApiResponse<Usuario>> _post(String username, String password) async {
     try {
-      final url = "http://carros-springboot.herokuapp.com/api/v2/login";
+      final url = "https://carros-springboot.herokuapp.com/api/v2/login";
 
       Map<String, String> headers = {
         "Content-Type": "application/json",
