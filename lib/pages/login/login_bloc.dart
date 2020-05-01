@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:example/pages/api_response.dart';
-import 'package:example/pages/carro/home_page.dart';
+import 'package:example/pages/home_page.dart';
 import 'package:example/pages/login/login_api.dart';
 import 'package:example/pages/login/usuario.dart';
 import 'package:example/utils/alert.dart';

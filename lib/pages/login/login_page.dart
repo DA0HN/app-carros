@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:example/pages/carro/home_page.dart';
+import 'package:example/pages/home_page.dart';
 import 'package:example/pages/login/login_bloc.dart';
 import 'package:example/pages/login/usuario.dart';
 import 'package:example/utils/nav.dart';

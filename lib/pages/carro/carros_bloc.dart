@@ -4,12 +4,14 @@ import 'package:example/pages/carro/tipo_carro.dart';
 import 'package:example/utils/bloc.dart';
 
 class CarrosBloc extends Bloc<List<Carro>> {
-  void fetch(TipoCarro tipo) async {
+  Future<List<Carro>> fetch(TipoCarro tipo) async {
+    List<Carro> carros;
     try {
-      List<Carro> carros = await CarrosApi.getCarros(tipo);
+      carros = await CarrosApi.getCarros(tipo);
       add(carros);
     } catch (e) {
       addError(e);
     }
+    return carros;
   }
 }

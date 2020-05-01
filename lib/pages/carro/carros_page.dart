@@ -1,66 +1,21 @@
 import 'package:example/pages/carro/carro.dart';
 import 'package:example/pages/detalhes/detalhes_carro_page.dart';
-import 'package:example/pages/carro/carros_bloc.dart';
-import 'package:example/pages/carro/tipo_carro.dart';
 import 'package:example/utils/nav.dart';
-import 'package:example/widget/app_text_error.dart';
 import 'package:flutter/material.dart';
 
-class CarrosListView extends StatefulWidget {
-  TipoCarro tipo;
+class CarrosShowList extends StatelessWidget {
+  List<Carro> _carros;
 
-  CarrosListView(this.tipo);
-
-  @override
-  _CarrosListViewState createState() => _CarrosListViewState();
-}
-
-class _CarrosListViewState extends State<CarrosListView> with AutomaticKeepAliveClientMixin {
-  @override
-  bool get wantKeepAlive => true;
-
-  TipoCarro get tipo => widget.tipo;
-
-  final _bloc = CarrosBloc();
-
-  @override
-  void initState() {
-    super.initState();
-    _bloc.fetch(tipo);
-  }
+  CarrosShowList(this._carros);
 
   @override
   Widget build(BuildContext context) {
-    super.build(context);
-    return _body();
-  }
-
-  _body() {
-    return StreamBuilder(
-      stream: _bloc.stream,
-      builder: (BuildContext context, AsyncSnapshot snapshot) {
-        if (snapshot.hasError) {
-          print(snapshot.error);
-          return TextError("Não foi possível buscar os carros");
-        }
-        if (!snapshot.hasData) {
-          return Center(
-            child: CircularProgressIndicator(),
-          );
-        }
-        List<Carro> carros = snapshot.data;
-        return _listView(carros);
-      },
-    );
-  }
-
-  Container _listView(List<Carro> carros) {
     return Container(
       child: ListView.builder(
         padding: EdgeInsets.all(16),
-        itemCount: carros != null ? carros.length : 0,
+        itemCount: _carros != null ? _carros.length : 0,
         itemBuilder: (context, index) {
-          Carro c = carros[index];
+          Carro carro = _carros[index];
           return Card(
             color: Colors.grey[100],
             child: Container(
@@ -70,19 +25,19 @@ class _CarrosListViewState extends State<CarrosListView> with AutomaticKeepAlive
                 children: <Widget>[
                   Center(
                     child: Image.network(
-                      c.urlFoto ??
+                      carro.urlFoto ??
                           "http://www.livroandroid.com.br/livro/carros/luxo/Koenigsegg_CCX.png",
                       width: 250,
                     ),
                   ),
                   Text(
-                    c.nome ?? "desconhecido",
+                    carro.nome ?? "desconhecido",
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(fontSize: 25),
                   ),
                   Text(
-                    c.descricao ?? "descrição...",
+                    carro.descricao ?? "descrição...",
                     style: TextStyle(fontSize: 16),
                   ),
                   ButtonBarTheme(
@@ -91,7 +46,7 @@ class _CarrosListViewState extends State<CarrosListView> with AutomaticKeepAlive
                       children: <Widget>[
                         FlatButton(
                           child: const Text("DETALHES"),
-                          onPressed: () => _onClickDetalhes(c),
+                          onPressed: () => _onClickDetalhes(context, carro),
                         ),
                         FlatButton(
                           child: const Text("SHARE"),
@@ -109,13 +64,7 @@ class _CarrosListViewState extends State<CarrosListView> with AutomaticKeepAlive
     );
   }
 
-  _onClickDetalhes(Carro carro) {
+  _onClickDetalhes(BuildContext context, Carro carro) {
     push(context, CarroPage(carro));
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    _bloc.dispose();
   }
 }

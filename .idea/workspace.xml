@@ -22,20 +22,14 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="br.com.example" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="894fda33-c0e6-4dea-a7be-bfae8d38477f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/pages/detalhes/detalhes_bloc.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/pages/detalhes/detalhes_carro_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/pages/detalhes/loripsum_api.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/widget/app_text_field.dart" afterDir="false" />
+    <list default="true" id="894fda33-c0e6-4dea-a7be-bfae8d38477f" name="Default Changelist" comment="Implementado Pull to Refresh na listview de Carros">
+      <change afterPath="$PROJECT_DIR$/lib/pages/carro/carros_show_listview.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/carro/carro_page.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/carro/carros_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/carro/carros_api.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/carro/carros_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/carro/carros_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/carro/carros_listview.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/carro/carros_listview.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/login/login_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/login/login_api.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/carro/carros_listview.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/carro/carros_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/carro/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/home_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/login/login_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/login/login_bloc.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/login/login_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/login/login_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widget/app_text.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widget/app_text.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +63,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/pages/carro" />
     <property name="project.structure.last.edited" value="SDK Location" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -77,9 +71,12 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\android\carros\lib\pages\carro" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\android\carros\lib\pages\detalhes" />
       <recent name="E:\android\carros\lib\pages" />
+      <recent name="E:\android\carros\lib\pages\detalhes" />
       <recent name="E:\android\carros\lib\pages\carro" />
       <recent name="E:\android\carros\lib\pages\login" />
       <recent name="E:\android\carros\lib\model" />
@@ -136,7 +133,21 @@
       <option name="project" value="LOCAL" />
       <updated>1588296170588</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Tela de detalhes do carro">
+      <created>1588355729510</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1588355729510</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Refatoração dos pacotes e padronização no nome dos arquivos">
+      <created>1588355786212</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588355786212</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -157,6 +168,9 @@
     <MESSAGE value="Refatoração do projeto utilizando Bloc" />
     <MESSAGE value="Dependencias" />
     <MESSAGE value="Implementação da pagina de carros utilizando MobX" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementação da pagina de carros utilizando MobX" />
+    <MESSAGE value="Tela de detalhes do carro" />
+    <MESSAGE value="Refatoração dos pacotes e padronização no nome dos arquivos" />
+    <MESSAGE value="Implementado Pull to Refresh na listview de Carros" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementado Pull to Refresh na listview de Carros" />
   </component>
 </project>
