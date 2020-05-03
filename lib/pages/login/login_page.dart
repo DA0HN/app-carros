@@ -1,9 +1,4 @@
-import 'dart:async';
-
-import 'package:example/pages/home_page.dart';
 import 'package:example/pages/login/login_bloc.dart';
-import 'package:example/pages/login/usuario.dart';
-import 'package:example/utils/nav.dart';
 import 'package:example/widget/app_button.dart';
 import 'package:example/widget/app_text_field.dart';
 import 'package:flutter/material.dart';
@@ -27,13 +22,6 @@ class _LoginPageState extends State<LoginPage> {
   @override
   void initState() {
     super.initState();
-    Future<Usuario> future = Usuario.get();
-    future.then((Usuario user) {
-      if (user != null) {
-        // Se o usuário não fizer logout o app mantém o último login ativo
-        push(context, HomePage(), replace: true);
-      }
-    });
   }
 
   @override

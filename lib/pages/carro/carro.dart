@@ -20,10 +20,10 @@ class Carro {
 
   Carro.fromJson(Map<String, dynamic> json) {
     id = json['id'];
-    nome = json['nome'];
+    nome = json['nome'] ?? "desconhecido";
     tipo = json['tipo'];
-    descricao = json['descricao'];
-    urlFoto = json['urlFoto'];
+    descricao = json['descricao'] ?? "Sem descrição...";
+    urlFoto = json['urlFoto'] ?? "http://www.livroandroid.com.br/livro/carros/luxo/Koenigsegg_CCX.png";
     urlVideo = json['urlVideo'];
     latitude = json['latitude'];
     longitude = json['longitude'];

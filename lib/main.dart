@@ -1,4 +1,4 @@
-import 'package:example/pages/login/login_page.dart';
+import 'package:example/pages/loading_page.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: LoginPage(),
+      home: LoadingPage(),
     );
   }
 }

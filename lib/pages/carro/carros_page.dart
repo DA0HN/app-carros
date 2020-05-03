@@ -25,19 +25,18 @@ class CarrosShowList extends StatelessWidget {
                 children: <Widget>[
                   Center(
                     child: Image.network(
-                      carro.urlFoto ??
-                          "http://www.livroandroid.com.br/livro/carros/luxo/Koenigsegg_CCX.png",
+                      carro.urlFoto,
                       width: 250,
                     ),
                   ),
                   Text(
-                    carro.nome ?? "desconhecido",
+                    carro.nome,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(fontSize: 25),
                   ),
                   Text(
-                    carro.descricao ?? "descrição...",
+                    carro.descricao,
                     style: TextStyle(fontSize: 16),
                   ),
                   ButtonBarTheme(
