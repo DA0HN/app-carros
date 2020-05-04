@@ -1,83 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AndroidLayouts">
-    <shared>
-      <config />
-    </shared>
+  <component name="AndroidConfiguredLogFilters">
+    <filters>
+      <filter>
+        <option name="logLevel" value="verbose" />
+        <option name="logMessagePattern" value="" />
+        <option name="logTagPattern" value="^(?!(EGL_emulation|OpenGl*))" />
+        <option name="name" value="br.com.example.*" />
+        <option name="packageNamePattern" value="br.com.example." />
+        <option name="pid" value="" />
+      </filter>
+    </filters>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="br.com.example.*" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41667e8d-dd5e-455e-ba02-5ae1b5421162" name="Default Changelist" comment="Adicionada dependencia sqflite. Implementado DAO do carro. Implementado comunicação com o Banco de dados. Criação de uma tela de loading para carregar o banco e outros componentes">
-      <change afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/R.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/R1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/R2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/R3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/full.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/full1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/full2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/full3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/gradle_wrapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/gradle_wrapper1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/out.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/out1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/out2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/out3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/out4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/res.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/res1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/res2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/res3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/android.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/profile/profile.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/carros.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/pages/loading_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/utils/dao/carro_dao.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/utils/database/db_manager.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+    <list default="true" id="24268a25-0a39-4de4-bfe7-763d8ab8c93e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/utils/dao/generic_dao.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils/entity.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_for_Android.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/main_dart.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/api_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/api_response.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/profile/profile.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/profile/profile.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carros.iml" beforeDir="false" afterPath="$PROJECT_DIR$/carros.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/carro/carro.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/carro/carro.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/carro/carros_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/carro/carros_api.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/carro/carros_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/carro/carros_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/login/login_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/login/login_api.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/login/login_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/login/login_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/login/login_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/login/login_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/loading_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/loading_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils/dao/carro_dao.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/dao/carro_dao.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,62 +73,24 @@
     <select />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5X_API_26" />
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$">
-      <ProjectState />
-    </projectState>
-  </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <task path="$PROJECT_DIR$">
-          <activation />
-        </task>
-        <projects_view>
-          <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="carros" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="carros" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-            </expand>
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="carros" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="stateful_widget" />
+        <option value="Dart File" />
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectId" id="1bPpnp4d7ApucdvDJzywJGRCDiw" />
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/utils/dao" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -180,21 +99,18 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Variables" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.general" />
     <property name="show.migrate.to.gradle.popup" value="false" />
-    <property name="show.unlinked.gradle.project.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\android\carros\lib\utils\dao" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
       <method v="2" />
@@ -205,74 +121,50 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="41667e8d-dd5e-455e-ba02-5ae1b5421162" name="Default Changelist" comment="" />
-      <created>1588543752767</created>
+      <changelist id="24268a25-0a39-4de4-bfe7-763d8ab8c93e" name="Default Changelist" comment="" />
+      <created>1588603187950</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1588543752767</updated>
-      <workItem from="1588543757894" duration="281000" />
-      <workItem from="1588544055368" duration="55000" />
-      <workItem from="1588544112883" duration="76000" />
-      <workItem from="1588545175754" duration="3366000" />
+      <updated>1588603187950</updated>
+      <workItem from="1588603191879" duration="4550000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adicionada dependencia sqflite. Implementado DAO do carro. Implementado comunicação com o Banco de dados. Criação de uma tela de loading para carregar o banco e outros componentes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionada dependencia sqflite. Implementado DAO do carro. Implementado comunicação com o Banco de dados. Criação de uma tela de loading para carregar o banco e outros componentes" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="272" y="58" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588546140460">
+    <state x="272" y="58" key="#Console" timestamp="1588603789147">
       <screen x="0" y="30" width="1360" height="738" />
     </state>
-    <state x="272" y="58" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.1360.738@0.30.1360.738" timestamp="1588546140460" />
-    <state x="303" y="30" key="CommitChangelistDialog2" timestamp="1588548522573">
+    <state x="272" y="58" key="#Console/0.30.1360.738@0.30.1360.738" timestamp="1588603789147" />
+    <state x="272" y="58" key="#Menus_and_Toolbars" timestamp="1588604820935">
       <screen x="0" y="30" width="1360" height="738" />
     </state>
-    <state x="303" y="30" key="CommitChangelistDialog2/0.30.1360.738@0.30.1360.738" timestamp="1588548522573" />
-    <state x="460" y="140" key="FileChooserDialogImpl" timestamp="1588545738339">
+    <state x="272" y="58" key="#Menus_and_Toolbars/0.30.1360.738@0.30.1360.738" timestamp="1588604820935" />
+    <state x="485" y="116" key="#com.intellij.ide.util.MemberChooser" timestamp="1588605392946">
       <screen x="0" y="30" width="1360" height="738" />
     </state>
-    <state x="460" y="140" key="FileChooserDialogImpl/0.30.1360.738@0.30.1360.738" timestamp="1588545738339" />
-    <state width="624" height="424" key="GridCell.Tab.0.bottom" timestamp="1588547691298">
+    <state x="485" y="116" key="#com.intellij.ide.util.MemberChooser/0.30.1360.738@0.30.1360.738" timestamp="1588605392946" />
+    <state width="1317" height="382" key="GridCell.Tab.0.bottom" timestamp="1588604390318">
       <screen x="0" y="30" width="1360" height="738" />
     </state>
-    <state width="624" height="424" key="GridCell.Tab.0.bottom/0.30.1360.738@0.30.1360.738" timestamp="1588547691298" />
-    <state width="624" height="424" key="GridCell.Tab.0.center" timestamp="1588547691297">
+    <state width="1317" height="382" key="GridCell.Tab.0.bottom/0.30.1360.738@0.30.1360.738" timestamp="1588604390318" />
+    <state width="1317" height="382" key="GridCell.Tab.0.center" timestamp="1588604390318">
       <screen x="0" y="30" width="1360" height="738" />
     </state>
-    <state width="624" height="424" key="GridCell.Tab.0.center/0.30.1360.738@0.30.1360.738" timestamp="1588547691297" />
-    <state width="624" height="424" key="GridCell.Tab.0.left" timestamp="1588547691297">
+    <state width="1317" height="382" key="GridCell.Tab.0.center/0.30.1360.738@0.30.1360.738" timestamp="1588604390318" />
+    <state width="1317" height="382" key="GridCell.Tab.0.left" timestamp="1588604390318">
       <screen x="0" y="30" width="1360" height="738" />
     </state>
-    <state width="624" height="424" key="GridCell.Tab.0.left/0.30.1360.738@0.30.1360.738" timestamp="1588547691297" />
-    <state width="624" height="424" key="GridCell.Tab.0.right" timestamp="1588547691298">
+    <state width="1317" height="382" key="GridCell.Tab.0.left/0.30.1360.738@0.30.1360.738" timestamp="1588604390318" />
+    <state width="1317" height="382" key="GridCell.Tab.0.right" timestamp="1588604390318">
       <screen x="0" y="30" width="1360" height="738" />
     </state>
-    <state width="624" height="424" key="GridCell.Tab.0.right/0.30.1360.738@0.30.1360.738" timestamp="1588547691298" />
-    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1588546105629">
+    <state width="1317" height="382" key="GridCell.Tab.0.right/0.30.1360.738@0.30.1360.738" timestamp="1588604390318" />
+    <state x="441" y="244" key="edit.logcat.filter.dialog.dimensions" timestamp="1588604370328">
       <screen x="0" y="30" width="1360" height="738" />
     </state>
-    <state width="196" height="457" key="HiddenNamespacesPopup/0.30.1360.738@0.30.1360.738" timestamp="1588546105629" />
-    <state x="160" y="30" key="SettingsEditor" timestamp="1588546095265">
-      <screen x="0" y="30" width="1360" height="738" />
-    </state>
-    <state x="160" y="30" key="SettingsEditor/0.30.1360.738@0.30.1360.738" timestamp="1588546095265" />
+    <state x="441" y="244" key="edit.logcat.filter.dialog.dimensions/0.30.1360.738@0.30.1360.738" timestamp="1588604370328" />
   </component>
 </project>

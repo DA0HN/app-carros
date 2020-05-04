@@ -41,7 +41,7 @@ class _LoadingPageState extends State<LoadingPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blue[200],
+      color: Colors.blue[300],
       child: Center(
         child: CircularProgressIndicator(),
       ),

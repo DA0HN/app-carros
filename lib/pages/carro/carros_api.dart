@@ -15,7 +15,8 @@ class CarrosApi {
       "Authorization": "Bearer $token"
     };
 
-    var url = "http://carros-springboot.herokuapp.com/api/v2/carros/tipo/${tipo.tipo}";
+    var url =
+        "http://carros-springboot.herokuapp.com/api/v2/carros/tipo/${tipo.tipo}";
     print(">> GET $url");
     var response = await http.get(url, headers: headers);
 
@@ -25,7 +26,8 @@ class CarrosApi {
 
     try {
       List responseList = convert.json.decode(json);
-      final carros = responseList.map<Carro>((data) => Carro.fromJson(data)).toList();
+      final carros =
+          responseList.map<Carro>((data) => Carro.fromMap(data)).toList();
       _saveOnDB(carros);
       return carros;
     } catch (error, exception) {
