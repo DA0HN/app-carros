@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b345a398-5eb3-4e06-9386-3791e4003de4" name="Default Changelist" comment="">
+    <list default="true" id="b345a398-5eb3-4e06-9386-3791e4003de4" name="Default Changelist" comment="Consulta a conectividade do dispositivo para executar a chamada da lista de carros em memoria ou na api">
+      <change afterPath="$PROJECT_DIR$/lib/utils/connectivity.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/carro/carros_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/carro/carros_api.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/carro/carros_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/carro/carros_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/carro/carros_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/carro/carros_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/utils/dao/carro_dao.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/dao/carro_dao.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +66,7 @@
       <updated>1588771181401</updated>
       <workItem from="1588771187180" duration="2047000" />
       <workItem from="1588788813976" duration="79000" />
-      <workItem from="1588788935290" duration="2372000" />
+      <workItem from="1588788935290" duration="8647000" />
     </task>
     <task id="LOCAL-00001" summary="Implementado criação do banco através do asset create.sql">
       <created>1588771534114</created>
@@ -73,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588771534114</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implementação de cache da lista de carros (Buscar dados sobre os carros no banco de dados interno quando não houver internet)">
+      <created>1588792246597</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588792246609</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -81,37 +90,43 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Implementado criação do banco através do asset create.sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementado criação do banco através do asset create.sql" />
+    <MESSAGE value="Implementação de cache da lista de carros (Buscar dados sobre os carros no banco de dados interno quando não houver internet)" />
+    <MESSAGE value="Consulta a conectividade do dispositivo para executar a chamada da lista de carros em memoria ou na api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Consulta a conectividade do dispositivo para executar a chamada da lista de carros em memoria ou na api" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="303" y="30" key="CommitChangelistDialog2" timestamp="1588771549802">
+    <state x="0" y="30" key="CommitChangelistDialog2" timestamp="1588799194795">
       <screen x="0" y="30" width="1360" height="738" />
     </state>
-    <state x="303" y="30" key="CommitChangelistDialog2/0.30.1360.738@0.30.1360.738" timestamp="1588771549802" />
+    <state x="0" y="30" key="CommitChangelistDialog2/0.30.1360.738@0.30.1360.738" timestamp="1588799194795" />
     <state x="311" y="158" key="FileChooserDialogImpl" timestamp="1588791594542">
       <screen x="0" y="30" width="1360" height="738" />
     </state>
     <state x="311" y="158" key="FileChooserDialogImpl/0.30.1360.738@0.30.1360.738" timestamp="1588791594542" />
-    <state width="735" height="492" key="GridCell.Tab.0.bottom" timestamp="1588791706847">
+    <state width="735" height="492" key="GridCell.Tab.0.bottom" timestamp="1588799484985">
       <screen x="0" y="30" width="1360" height="738" />
     </state>
-    <state width="735" height="492" key="GridCell.Tab.0.bottom/0.30.1360.738@0.30.1360.738" timestamp="1588791706847" />
-    <state width="735" height="492" key="GridCell.Tab.0.center" timestamp="1588791706847">
+    <state width="735" height="492" key="GridCell.Tab.0.bottom/0.30.1360.738@0.30.1360.738" timestamp="1588799484985" />
+    <state width="735" height="492" key="GridCell.Tab.0.center" timestamp="1588799484985">
       <screen x="0" y="30" width="1360" height="738" />
     </state>
-    <state width="735" height="492" key="GridCell.Tab.0.center/0.30.1360.738@0.30.1360.738" timestamp="1588791706847" />
-    <state width="735" height="492" key="GridCell.Tab.0.left" timestamp="1588791706847">
+    <state width="735" height="492" key="GridCell.Tab.0.center/0.30.1360.738@0.30.1360.738" timestamp="1588799484985" />
+    <state width="735" height="492" key="GridCell.Tab.0.left" timestamp="1588799484985">
       <screen x="0" y="30" width="1360" height="738" />
     </state>
-    <state width="735" height="492" key="GridCell.Tab.0.left/0.30.1360.738@0.30.1360.738" timestamp="1588791706847" />
-    <state width="735" height="492" key="GridCell.Tab.0.right" timestamp="1588791706847">
+    <state width="735" height="492" key="GridCell.Tab.0.left/0.30.1360.738@0.30.1360.738" timestamp="1588799484985" />
+    <state width="735" height="492" key="GridCell.Tab.0.right" timestamp="1588799484985">
       <screen x="0" y="30" width="1360" height="738" />
     </state>
-    <state width="735" height="492" key="GridCell.Tab.0.right/0.30.1360.738@0.30.1360.738" timestamp="1588791706847" />
-    <state x="32" y="46" key="SettingsEditor" timestamp="1588791597177">
+    <state width="735" height="492" key="GridCell.Tab.0.right/0.30.1360.738@0.30.1360.738" timestamp="1588799484985" />
+    <state x="32" y="46" key="SettingsEditor" timestamp="1588794025479">
       <screen x="0" y="30" width="1360" height="738" />
     </state>
-    <state x="32" y="46" key="SettingsEditor/0.30.1360.738@0.30.1360.738" timestamp="1588791597177" />
+    <state x="32" y="46" key="SettingsEditor/0.30.1360.738@0.30.1360.738" timestamp="1588794025479" />
+    <state x="123" y="134" key="Vcs.Push.Dialog.v2" timestamp="1588792256827">
+      <screen x="0" y="30" width="1360" height="738" />
+    </state>
+    <state x="123" y="134" key="Vcs.Push.Dialog.v2/0.30.1360.738@0.30.1360.738" timestamp="1588792256827" />
     <state x="336" y="180" key="run.anything.popup" timestamp="1588771320800">
       <screen x="0" y="30" width="1360" height="738" />
     </state>

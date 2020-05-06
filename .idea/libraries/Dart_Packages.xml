@@ -58,6 +58,27 @@
             </list>
           </value>
         </entry>
+        <entry key="connectivity">
+          <value>
+            <list>
+              <option value="C:/flutter/.pub-cache/hosted/pub.dartlang.org/connectivity-0.4.8+5/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="connectivity_macos">
+          <value>
+            <list>
+              <option value="C:/flutter/.pub-cache/hosted/pub.dartlang.org/connectivity_macos-0.1.0+3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="connectivity_platform_interface">
+          <value>
+            <list>
+              <option value="C:/flutter/.pub-cache/hosted/pub.dartlang.org/connectivity_platform_interface-1.0.5/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="convert">
           <value>
             <list>
@@ -229,7 +250,7 @@
         <entry key="shared_preferences">
           <value>
             <list>
-              <option value="C:/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.5.7/lib" />
+              <option value="C:/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.5.7+1/lib" />
             </list>
           </value>
         </entry>
@@ -271,14 +292,14 @@
         <entry key="sqflite">
           <value>
             <list>
-              <option value="C:/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-1.3.0/lib" />
+              <option value="C:/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-1.3.0+1/lib" />
             </list>
           </value>
         </entry>
         <entry key="sqflite_common">
           <value>
             <list>
-              <option value="C:/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite_common-1.0.0+1/lib" />
+              <option value="C:/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite_common-1.0.1/lib" />
             </list>
           </value>
         </entry>
@@ -363,6 +384,9 @@
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/charcode-1.1.2/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/clock-1.0.1/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.14.11/lib" />
+      <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/connectivity-0.4.8+5/lib" />
+      <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/connectivity_macos-0.1.0+3/lib" />
+      <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/connectivity_platform_interface-1.0.5/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/convert-2.1.1/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-2.1.3/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-0.1.3/lib" />
@@ -384,13 +408,13 @@
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-1.0.2/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/quiver-2.0.5/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/rxdart-0.24.0/lib" />
-      <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.5.7/lib" />
+      <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.5.7+1/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_macos-0.0.1+7/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_platform_interface-1.0.3/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_web-0.1.2+4/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.5.5/lib" />
-      <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-1.3.0/lib" />
-      <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite_common-1.0.0+1/lib" />
+      <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-1.3.0+1/lib" />
+      <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite_common-1.0.1/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/stack_trace-1.9.3/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/stream_channel-2.0.0/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/string_scanner-1.0.5/lib" />

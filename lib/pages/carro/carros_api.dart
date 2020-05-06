@@ -3,7 +3,6 @@ import 'dart:convert' as convert;
 import 'package:example/pages/carro/carro.dart';
 import 'package:example/pages/carro/tipo_carro.dart';
 import 'package:example/pages/login/usuario.dart';
-import 'package:example/utils/dao/carro_dao.dart';
 import 'package:http/http.dart' as http;
 
 class CarrosApi {
@@ -28,17 +27,11 @@ class CarrosApi {
       List responseList = convert.json.decode(json);
       final carros =
           responseList.map<Carro>((data) => Carro.fromMap(data)).toList();
-      _saveOnDB(carros);
       return carros;
     } catch (error, exception) {
       print(">> Error: $error | $exception");
       throw exception;
     }
-  }
-
-  static _saveOnDB(List<Carro> carros) {
-    final dao = new CarroDao();
-    carros.forEach(dao.save);
   }
 
   static Future<String> getToken() async {
