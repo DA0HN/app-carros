@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/services.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
@@ -32,10 +33,13 @@ class DatabaseManager {
   }
 
   FutureOr<void> _onCreate(Database db, int version) async {
-    await db.execute(
-        'CREATE TABLE carro(id INTEGER PRIMARY KEY, tipo TEXT, nome TEXT,'
-        ' descricao TEXT, urlFoto TEXT, urlVideo TEXT, latitude TEXT,'
-        ' longitude TEXT)');
+    String sql = await rootBundle.loadString("assets/sql/create.sql");
+    List<String> commands = sql.split(";");
+
+    commands.forEach((_sql) async {
+      if(_sql.trim().isNotEmpty)
+        await db.execute(_sql);
+    });
   }
 
   Future<FutureOr<void>> _onUpgrade(
