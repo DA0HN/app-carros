@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:example/pages/carro/carro.dart';
 import 'package:example/pages/detalhes/detalhes_carro_page.dart';
 import 'package:example/utils/nav.dart';
@@ -24,8 +25,12 @@ class CarrosShowList extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Center(
-                    child: Image.network(
-                      carro.urlFoto,
+                    child: CachedNetworkImage(
+                      progressIndicatorBuilder: (context, url, progress) =>
+                          CircularProgressIndicator(
+                        value: progress.progress,
+                      ),
+                      imageUrl: carro.urlFoto,
                       width: 250,
                     ),
                   ),
