@@ -8,6 +8,7 @@ import 'package:example/utils/dao/carro_dao.dart';
 class CarrosBloc extends Bloc<List<Carro>> {
   Future<List<Carro>> fetch(TipoCarro tipoCarro) async {
     bool networkOn = await isNetworkOn();
+    print(">> Network ON: $networkOn");
     List<Carro> carros;
     try {
       if (networkOn) {

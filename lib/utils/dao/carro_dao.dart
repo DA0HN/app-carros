@@ -1,6 +1,6 @@
 import 'package:example/pages/carro/carro.dart';
 import 'package:example/pages/carro/tipo_carro.dart';
-import 'package:example/utils/dao/generic_dao.dart';
+import 'package:example/utils/database/generic_dao.dart';
 
 class CarroDao extends GenericDao<Carro> {
   Future<List<Carro>> findAllByTipo(TipoCarro tipo) async {

@@ -1,5 +1,6 @@
 import 'package:example/pages/carro/carro.dart';
 import 'package:example/pages/detalhes/detalhes_bloc.dart';
+import 'package:example/pages/detalhes/favorito/favorito_service.dart';
 import 'package:example/widget/app_text.dart';
 import 'package:flutter/material.dart';
 
@@ -13,12 +14,17 @@ class CarroPage extends StatefulWidget {
 }
 
 class _CarroPageState extends State<CarroPage> {
+  Color color = Colors.grey;
+
+  Carro get carro => widget._carro;
+
   final _detalhesBloc = DetalhesBloc();
 
   @override
   void initState() {
     super.initState();
     _detalhesBloc.fetch();
+    FavoritoService.isFavorito(carro).then(_changeStateFavorito);
   }
 
   @override
@@ -26,7 +32,7 @@ class _CarroPageState extends State<CarroPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(widget._carro.nome),
+        title: Text(carro.nome),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.place),
@@ -57,7 +63,7 @@ class _CarroPageState extends State<CarroPage> {
       padding: EdgeInsets.all(16),
       child: ListView(
         children: <Widget>[
-          Image.network(widget._carro.urlFoto),
+          Image.network(carro.urlFoto),
           _head(),
           Divider(color: Colors.blueGrey,),
           _content()
@@ -70,7 +76,7 @@ class _CarroPageState extends State<CarroPage> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        text(widget._carro.descricao, fontSize: 16, bold: true),
+        text(carro.descricao, fontSize: 16, bold: true),
         SizedBox(height: 20,),
         StreamBuilder(
           stream: _detalhesBloc.stream,
@@ -93,14 +99,14 @@ class _CarroPageState extends State<CarroPage> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                text(widget._carro.nome, fontSize: 20, bold: true),
-                text(widget._carro.tipo, fontSize: 16),
+                text(carro.nome, fontSize: 20, bold: true),
+                text(carro.tipo, fontSize: 16),
               ],
             ),
             Row(
               children: <Widget>[
                 IconButton(
-                  icon: Icon(Icons.favorite, color: Colors.red, size: 40),
+                  icon: Icon(Icons.favorite, color: color, size: 40),
                   onPressed: _onClickFavorito,
                 ),
                 IconButton(
@@ -117,7 +123,16 @@ class _CarroPageState extends State<CarroPage> {
 
   void _onClickVideo() {}
 
-  void _onClickFavorito() {}
+  void _onClickFavorito() async {
+    bool favorito = await FavoritoService.favoritar(carro);
+    _changeStateFavorito(favorito);
+  }
+
+  void _changeStateFavorito(bool favorito) {
+    setState(() {
+      color = favorito ? Colors.red : Colors.grey;
+    });
+  }
 
   void _onClickShare() {}
 

@@ -1,5 +1,5 @@
 import 'package:example/utils/database/db_manager.dart';
-import 'package:example/utils/entity.dart';
+import 'package:example/utils/database/entity.dart';
 import 'package:sqflite/sqflite.dart';
 
 abstract class GenericDao<T extends Entity> {
@@ -10,26 +10,32 @@ abstract class GenericDao<T extends Entity> {
   // Instancia do banco de dados
   Future<Database> get db => DatabaseManager.getInstance().db;
 
+  processJson(List entities) {
+    return entities.map<T>((json) => fromMap(json)).toList();
+  }
+  
+  Future<List<T>> query(String sql, [List<dynamic> arguments]) async {
+    var dbClient = await db;
+    final list = await dbClient.rawQuery(sql, arguments);
+    return processJson(list);
+  }
+
   Future<int> save(T entity) async {
     var dbClient = await db;
-    var id = await dbClient.insert("carro", entity.toMap(),
+    var id = await dbClient.insert(tableName, entity.toMap(),
         conflictAlgorithm: ConflictAlgorithm.replace);
     print('>> id: $id');
     return id;
   }
 
   Future<List<T>> findAll() async {
-    final dbClient = await db;
-    final entities = await dbClient.rawQuery('select * from $tableName');
-    return processJson(entities);
+   return query('select * from $tableName');
   }
 
   Future<T> findById(int id) async {
-    final dbClient = await db;
     final entities =
-        await dbClient.rawQuery('select * from $tableName where id=?', [id]);
-    if (entities.length > 0) return fromMap(entities.first);
-    return null;
+        await query('select * from $tableName where id=?', [id]);
+    return entities.length > 0 ? entities.first : null;
   }
 
   Future<bool> exists(int id) async {
@@ -51,9 +57,5 @@ abstract class GenericDao<T extends Entity> {
     final dbClient = await db;
     final list = await dbClient.rawQuery('select count(*) from $tableName');
     return Sqflite.firstIntValue(list);
-  }
-
-  processJson(List entities) {
-    return entities.map<T>((json) => fromMap(json)).toList();
   }
 }

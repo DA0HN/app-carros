@@ -1,5 +1,6 @@
 import 'package:example/pages/carro/carros_show_listview.dart';
 import 'package:example/pages/carro/tipo_carro.dart';
+import 'package:example/pages/detalhes/favorito/favoritos_page.dart';
 import 'package:example/utils/prefs.dart';
 import 'package:example/widget/app_drawer_list.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +10,8 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin<HomePage> {
+class _HomePageState extends State<HomePage>
+    with SingleTickerProviderStateMixin<HomePage> {
   TabController _tabController;
 
   @override
@@ -20,7 +22,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
 
   _initTabs() async {
     int indexTab = await Prefs.getInt("tab_index");
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController = TabController(length: 4, vsync: this);
 
     setState(() {
       _tabController.index = indexTab;
@@ -49,7 +51,24 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         ? null
         : TabBar(
             controller: _tabController,
-            tabs: [Tab(text: "Clássicos"), Tab(text: "Esportivos"), Tab(text: "Luxo")],
+            tabs: [
+              Tab(
+                text: "Clássicos",
+                icon: Icon(Icons.directions_car),
+              ),
+              Tab(
+                text: "Esportivos",
+                icon: Icon(Icons.directions_car),
+              ),
+              Tab(
+                text: "Luxo",
+                icon: Icon(Icons.directions_car),
+              ),
+              Tab(
+                text: "Favoritos",
+                icon: Icon(Icons.favorite),
+              ),
+            ],
           );
   }
 
@@ -60,6 +79,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
             CarrosListView(TipoCarro.classicos()),
             CarrosListView(TipoCarro.esportivos()),
             CarrosListView(TipoCarro.luxo()),
+            FavoritosListView(),
           ]);
   }
 }

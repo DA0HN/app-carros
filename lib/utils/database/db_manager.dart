@@ -35,7 +35,7 @@ class DatabaseManager {
   FutureOr<void> _onCreate(Database db, int version) async {
     String sql = await rootBundle.loadString("assets/sql/create.sql");
     List<String> commands = sql.split(";");
-
+    print(commands.toString());
     commands.forEach((_sql) async {
       if(_sql.trim().isNotEmpty)
         await db.execute(_sql);

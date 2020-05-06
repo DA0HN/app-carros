@@ -1,21 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b345a398-5eb3-4e06-9386-3791e4003de4" name="Default Changelist" comment="Consulta a conectividade do dispositivo para executar a chamada da lista de carros em memoria ou na api">
-      <change afterPath="$PROJECT_DIR$/lib/utils/connectivity.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+    <list default="true" id="b345a398-5eb3-4e06-9386-3791e4003de4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pages/detalhes/favorito/favorito.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pages/detalhes/favorito/favorito_service.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pages/detalhes/favorito/favoritos_bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pages/detalhes/favorito/favoritos_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils/dao/favorito_dao.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/carro/carros_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/carro/carros_api.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sql/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sql/create.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/carro/carro.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/carro/carro.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/carro/carros_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/carro/carros_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/detalhes/detalhes_carro_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/detalhes/detalhes_carro_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/home_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils/connectivity.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/connectivity.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils/dao/carro_dao.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/dao/carro_dao.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils/dao/generic_dao.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/database/generic_dao.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils/database/db_manager.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/database/db_manager.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils/entity.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/database/entity.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="carros" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="carros" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="carros" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5X_API_26" />
   <component name="Git.Settings">
@@ -28,11 +67,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="C:/java-libs/open-javafx-sdk-11.0.2/lib/javafx.web.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/pages/detalhes/favorito" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -47,6 +87,14 @@
     <property name="settings.editor.selected.configurable" value="device.file.explorer" />
     <property name="show.migrate.to.gradle.popup" value="false" />
     <property name="show.unlinked.gradle.project.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\android\carros\lib\pages\detalhes\favorito" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\android\carros\lib\utils\database" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
@@ -66,7 +114,7 @@
       <updated>1588771181401</updated>
       <workItem from="1588771187180" duration="2047000" />
       <workItem from="1588788813976" duration="79000" />
-      <workItem from="1588788935290" duration="8647000" />
+      <workItem from="1588788935290" duration="16244000" />
     </task>
     <task id="LOCAL-00001" summary="Implementado criação do banco através do asset create.sql">
       <created>1588771534114</created>
@@ -82,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588792246609</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Consulta a conectividade do dispositivo para executar a chamada da lista de carros em memoria ou na api">
+      <created>1588799500415</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1588799500419</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,38 +150,42 @@
     <option name="LAST_COMMIT_MESSAGE" value="Consulta a conectividade do dispositivo para executar a chamada da lista de carros em memoria ou na api" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="30" key="CommitChangelistDialog2" timestamp="1588799194795">
+    <state x="0" y="30" key="CommitChangelistDialog2" timestamp="1588807849497">
       <screen x="0" y="30" width="1360" height="738" />
     </state>
-    <state x="0" y="30" key="CommitChangelistDialog2/0.30.1360.738@0.30.1360.738" timestamp="1588799194795" />
-    <state x="311" y="158" key="FileChooserDialogImpl" timestamp="1588791594542">
+    <state x="0" y="30" key="CommitChangelistDialog2/0.30.1360.738@0.30.1360.738" timestamp="1588807849497" />
+    <state x="311" y="158" key="FileChooserDialogImpl" timestamp="1588805078607">
       <screen x="0" y="30" width="1360" height="738" />
     </state>
-    <state x="311" y="158" key="FileChooserDialogImpl/0.30.1360.738@0.30.1360.738" timestamp="1588791594542" />
-    <state width="735" height="492" key="GridCell.Tab.0.bottom" timestamp="1588799484985">
+    <state x="311" y="158" key="FileChooserDialogImpl/0.30.1360.738@0.30.1360.738" timestamp="1588805078607" />
+    <state width="735" height="492" key="GridCell.Tab.0.bottom" timestamp="1588805689505">
       <screen x="0" y="30" width="1360" height="738" />
     </state>
-    <state width="735" height="492" key="GridCell.Tab.0.bottom/0.30.1360.738@0.30.1360.738" timestamp="1588799484985" />
-    <state width="735" height="492" key="GridCell.Tab.0.center" timestamp="1588799484985">
+    <state width="735" height="492" key="GridCell.Tab.0.bottom/0.30.1360.738@0.30.1360.738" timestamp="1588805689505" />
+    <state width="735" height="492" key="GridCell.Tab.0.center" timestamp="1588805689504">
       <screen x="0" y="30" width="1360" height="738" />
     </state>
-    <state width="735" height="492" key="GridCell.Tab.0.center/0.30.1360.738@0.30.1360.738" timestamp="1588799484985" />
-    <state width="735" height="492" key="GridCell.Tab.0.left" timestamp="1588799484985">
+    <state width="735" height="492" key="GridCell.Tab.0.center/0.30.1360.738@0.30.1360.738" timestamp="1588805689504" />
+    <state width="735" height="492" key="GridCell.Tab.0.left" timestamp="1588805689504">
       <screen x="0" y="30" width="1360" height="738" />
     </state>
-    <state width="735" height="492" key="GridCell.Tab.0.left/0.30.1360.738@0.30.1360.738" timestamp="1588799484985" />
-    <state width="735" height="492" key="GridCell.Tab.0.right" timestamp="1588799484985">
+    <state width="735" height="492" key="GridCell.Tab.0.left/0.30.1360.738@0.30.1360.738" timestamp="1588805689504" />
+    <state width="735" height="492" key="GridCell.Tab.0.right" timestamp="1588805689504">
       <screen x="0" y="30" width="1360" height="738" />
     </state>
-    <state width="735" height="492" key="GridCell.Tab.0.right/0.30.1360.738@0.30.1360.738" timestamp="1588799484985" />
+    <state width="735" height="492" key="GridCell.Tab.0.right/0.30.1360.738@0.30.1360.738" timestamp="1588805689504" />
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1588800439130">
+      <screen x="0" y="30" width="1360" height="738" />
+    </state>
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.30.1360.738@0.30.1360.738" timestamp="1588800439130" />
     <state x="32" y="46" key="SettingsEditor" timestamp="1588794025479">
       <screen x="0" y="30" width="1360" height="738" />
     </state>
     <state x="32" y="46" key="SettingsEditor/0.30.1360.738@0.30.1360.738" timestamp="1588794025479" />
-    <state x="123" y="134" key="Vcs.Push.Dialog.v2" timestamp="1588792256827">
+    <state x="123" y="134" key="Vcs.Push.Dialog.v2" timestamp="1588799509456">
       <screen x="0" y="30" width="1360" height="738" />
     </state>
-    <state x="123" y="134" key="Vcs.Push.Dialog.v2/0.30.1360.738@0.30.1360.738" timestamp="1588792256827" />
+    <state x="123" y="134" key="Vcs.Push.Dialog.v2/0.30.1360.738@0.30.1360.738" timestamp="1588799509456" />
     <state x="336" y="180" key="run.anything.popup" timestamp="1588771320800">
       <screen x="0" y="30" width="1360" height="738" />
     </state>
